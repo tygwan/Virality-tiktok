@@ -42,7 +42,8 @@ The workflow is divided into four key sections:
 ## Execution Results
 
 ### Trial Run Data
-*   현재 구성된 전체 Agent Workflow
+*   현재 구성된 전체 Agent Workflow.
+*   빨간 영역은 작동 실패한 workflow, 초록색 영역은 workflow 시도 성공.
 ![Workflow Trial](./WorkflowTrial.png)
 
 ### Successful Workflow Execution
