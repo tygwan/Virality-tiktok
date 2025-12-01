@@ -41,11 +41,11 @@ The workflow is divided into four key sections:
 
 ## Execution Results
 
+### Trial Run Data
+![Workflow Trial](./WorkflowTrial.png)
+
 ### Successful Workflow Execution
 ![Success Workflow](./SuccessWorkflow.png)
 
 ### Slack Notifications & Reports
 ![Slack Notifications](./Successworkflow-slack.png)
-
-### Trial Run Data
-![Workflow Trial](./WorkflowTrial.png)
