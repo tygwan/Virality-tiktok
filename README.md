@@ -1,8 +1,12 @@
-# Virality TikTok Automation Workflow
-
-> **🚧 Development Status: Active Development**
+> **🚧 Development Status: Paused (Blocked by External Dependency)**
 >
-> This project is currently under active development. Features and workflows are subject to change.
+> **Project Progress**
+> ```text
+> Workflow Architecture : [██████████] 100% (Completed)
+> System Implementation : [████████░░] 80%  (In Progress)
+> TikTok API Approval   : [░░░░░░░░░░] 0%   (Pending)
+> ```
+> **Current Blocker**: The automated workflow design is fully complete. However, the final integration is currently **paused** pending approval for the **TikTok Advertising Account**, which is required to access the necessary APIs for ad execution and tracking.
 
 This repository documents the **Virality v24** n8n workflow, designed to automate the lifecycle of TikTok viral marketing, from trend analysis to creator settlement.
 
