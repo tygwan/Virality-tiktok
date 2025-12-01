@@ -42,10 +42,14 @@ The workflow is divided into four key sections:
 ## Execution Results
 
 ### Trial Run Data
+*   현재 구성된 전체 Agent Workflow
 ![Workflow Trial](./WorkflowTrial.png)
 
 ### Successful Workflow Execution
+현재 실행 가능한 Agent Workflow
+*   Apify의 Tiktok API를 이용하여 원하는 Tag의 영상 정보 수집.
 ![Success Workflow](./SuccessWorkflow.png)
 
 ### Slack Notifications & Reports
+*   Tag를 지정하여 수집한 Tiktok 정보를 Slack으로 전송.
 ![Slack Notifications](./Successworkflow-slack.png)
