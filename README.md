@@ -1,31 +1,67 @@
 # Virality v24: TikTok Marketing Automation Workflow
 
-## Project Overview
+> **🚧 Development Status: Paused (Blocked by External Dependency)**
+>
+> **Project Progress**
+> ```text
+> Workflow Architecture : [██████████] 100% (Completed)
+> System Implementation : [████████░░] 80%  (In Progress)
+> TikTok API Approval   : [░░░░░░░░░░] 0%   (Pending)
+> ```
+> **Current Blocker**: The automated workflow design is fully complete. However, the final integration is currently **paused** pending approval for the **TikTok Advertising Account**, which is required to access the necessary APIs for ad execution and tracking.
 
-This repository documents an n8n workflow automating TikTok viral marketing operations. The system is currently paused, awaiting approval for a TikTok Advertising Account needed for API access.
+This repository documents the **Virality v24** n8n workflow, designed to automate the lifecycle of TikTok viral marketing, from trend analysis to creator settlement.
 
-**Development Status:**
-- Workflow Architecture: 100% complete
-- System Implementation: 80% in progress
-- TikTok API Approval: 0% (pending)
+---
 
-## Core Workflow Components
+## Workflow Structure
 
-The automation encompasses four primary sections:
+![Workflow Structure](./WorkflowStructure.png)
 
-1. **Market Insight** (Daily 09:00) - Analyzes trends and identifies opportunities using AI, delivering strategic insights via Slack
+The workflow is divided into four key sections:
 
-2. **Settlement & FDS** (Daily 06:00) - Aggregates creator performance metrics and includes an "AI Fraud Detection System" to identify suspicious traffic patterns before processing payouts
+1. **Market Insight (Daily 09:00)**
+   - Analyzes TikTok trends and competitor data.
+   - Identifies "Blue Ocean" opportunities using AI.
+   - Generates strategic insights and mission recommendations.
+   - Alerts via Slack (#market-insight).
 
-3. **A/B Testing** (Event-Driven) - Tests messaging variations through user segmentation, applying statistical analysis to validate hypothesis outcomes
+2. **Settlement & FDS (Daily 06:00)**
+   - Aggregates creator performance data (Views, Likes, Comments).
+   - Calculates dynamic rewards based on grade, category, and seasonality.
+   - **AI Fraud Detection System (FDS)**: Analyzes traffic patterns to detect abuse.
+   - Processes settlements (Approved/Hold/Blocked) and alerts via Slack (#fraud-alerts, #settlements).
 
-4. **Weekly Business Review** (Monday 08:00) - Compiles revenue, retention, and mission data with AI-generated executive summaries
+3. **A/B Testing (Event-Driven)**
+   - Triggered by mission clicks.
+   - Assigns users to Control (Group A) or Test (Group B) groups.
+   - Evaluates copy/incentive effectiveness (e.g., Emotional vs. Reward-focused).
+   - **AI Statistical Analysis**: Validates hypotheses and determines winners.
 
-## Operational Results
+4. **Weekly Business Review (Monday 08:00)**
+   - Aggregates weekly revenue, creator retention, and mission metrics.
+   - **AI Business Analyst**: Generates an executive summary and health score.
+   - Delivers a comprehensive WBR report to Slack (#wbr-reports).
 
-The team has demonstrated successful workflow execution using Apify's TikTok API for video data collection by hashtag, with results delivered to Slack notifications. However, full deployment remains blocked pending external approvals.
+---
 
-### Successful Workflow Execution Details
+## Execution Results
+
+### Trial Run Data
+
+현재 구성된 전체 Agent Workflow.
+- 빨간 영역은 작동 실패한 workflow, 초록색 영역은 workflow 시도 성공.
+
+![Workflow Trial](./WorkflowTrial.png)
+
+---
+
+### Successful Workflow Execution
+
+현재 실행 가능한 Agent Workflow
+- Apify의 Tiktok API를 이용하여 원하는 Tag의 영상 정보 수집.
+
+![Success Workflow](./SuccessWorkflow.png)
 
 <details>
 <summary><strong>1. Start Apify TikTok Scraper</strong></summary>
@@ -263,10 +299,16 @@ AI를 활용하여 마케팅 전략 인사이트를 생성합니다.
 
 </details>
 
+---
+
 ### Slack Notifications & Reports
 
+Tag를 지정하여 수집한 Tiktok 정보를 Slack으로 전송.
+
+![Slack Notifications](./Successworkflow-slack.png)
+
 <details>
-<summary><strong>6. Slack Alert</strong></summary>
+<summary><strong>6. Slack Alert Implementation</strong></summary>
 
 분석 결과가 Slack API를 통해 팀 채널에 자동 보고됩니다.
 
